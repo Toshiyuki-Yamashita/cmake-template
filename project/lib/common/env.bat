@@ -1,20 +1,16 @@
-::@echo off
+::Don't use "setlocal"
+call :read "%~1\project\config\env.txt"
+if exist "%USERPROFILE%\env.txt" (
+    call :read "%USERPROFILE%\env.txt"
+)
 
-setlocal
-set buildroot=%~1
-set buildini=%buildroot%\project\config\env.txt
 
-call :read %buildini%
-
-endlocal
+exit /b 0
 
 :read
-    setlocal
-    set file=%1
-    for /f "delims= eol=" %%F (%file%) do (
+    for /f "usebackq delims= eol=" %%F in (`type "%~1"`) do (
         if not "%%F" == "" (
             set %%F
         )
     )
-    endlocal
     exit /b 0

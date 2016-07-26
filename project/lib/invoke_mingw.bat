@@ -1,7 +1,5 @@
 @echo off 
 
-set MINGW_PATH=C:\usr\share\ruby\ruby\devkit-mingw64-64\mingw\bin
-
 goto :%buildtype%
 
 :generate

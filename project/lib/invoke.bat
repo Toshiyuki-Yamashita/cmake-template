@@ -13,6 +13,8 @@ set buildtarget=%~4
 
 set builddir=%buildroot%\build
 set srcdir=%buildroot%\src
+set projdir=%buildroot%\project
+
 
 :: check arg
 if "%buildroot%" == ""  (
@@ -33,6 +35,8 @@ if "%buildtarget%" == "" (
     call %0 %buildroot% %buildtype% %buildconfig% %buildtarget_default%
     goto :end
 )
+
+call %projdir%\lib\common\env.bat %buildroot%
 
 goto :%buildtype%
 
