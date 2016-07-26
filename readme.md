@@ -7,7 +7,10 @@ cmake-template is a project template which can manage project files easily.
 # Description
 cmake-template is a project template using [cmake](http://cmake.org).
 This template proposes a way to easily manage your project file in the following manner.
-* to save divided the folder according to the attribute of the document
+* saving divided the folder according to the attribute of the document.
+* being automatically added to the project by simply placing the source code.
+* supporting multi-platform/buildsystem.
+* being easily customized by user.
 
 # Demo
 
