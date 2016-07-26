@@ -3,4 +3,4 @@
 set batchdir=%~dp0
 set buildtool=mingw
 
-%batchdir%invoke_%buildtool% %*
+call %batchdir%invoke_%buildtool% %*
